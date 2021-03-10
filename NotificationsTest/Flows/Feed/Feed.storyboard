@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="NHg-vi-aTm">
+            <objects>
+                <navigationController id="Ski-yn-OJ8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="slK-1c-zVS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0rH-34-nC3" kind="relationship" relationship="rootViewController" id="Wd1-3Q-hL2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeM-Rs-1gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1254" y="-8"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="1ud-6d-2fJ">
+            <objects>
+                <viewController storyboardIdentifier="FeedViewController" id="0rH-34-nC3" customClass="FeedViewController" customModule="NotificationsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVd-lt-yDV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYa-Rz-4eK">
+                                <rect key="frame" x="188" y="437.5" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thl-e7-BZT">
+                                <rect key="frame" x="123.5" y="494" width="167" height="30"/>
+                                <state key="normal" title="Set Default Notifications"/>
+                                <connections>
+                                    <action selector="onDefaultNotificationsClick:" destination="0rH-34-nC3" eventType="touchUpInside" id="ERY-Xz-qFh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PR9-lF-mXc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jYa-Rz-4eK" firstAttribute="centerY" secondItem="xVd-lt-yDV" secondAttribute="centerY" id="9tc-eb-mly"/>
+                            <constraint firstItem="thl-e7-BZT" firstAttribute="top" secondItem="jYa-Rz-4eK" secondAttribute="bottom" constant="35.5" id="e0S-lg-gFK"/>
+                            <constraint firstItem="thl-e7-BZT" firstAttribute="centerX" secondItem="xVd-lt-yDV" secondAttribute="centerX" id="jr6-1w-QxG"/>
+                            <constraint firstItem="jYa-Rz-4eK" firstAttribute="centerX" secondItem="xVd-lt-yDV" secondAttribute="centerX" id="nf2-W8-H9g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QsU-ad-Zog"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggr-W1-Fdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-270" y="-7"/>
+        </scene>
+    </scenes>
+</document>
